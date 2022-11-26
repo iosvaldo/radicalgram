@@ -1,0 +1,27 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "title": "Radicalx Virtual Experiences",
+      "likes": 0,
+      "image": "./assets/radicalx_post.jpeg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "imageId": 1,
+      "content": "The experience is amazing!"
+    },
+    {
+      "id": 2,
+      "imageId": 1,
+      "content": "I look forward to collaborate!"
+    },
+    {
+      "id": 3,
+      "imageId": 1,
+      "content": "Go RadicalX!"
+    }
+  ]
+}
