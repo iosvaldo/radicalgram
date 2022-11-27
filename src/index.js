@@ -1,28 +1,26 @@
 // write your code here
 
-
 fetch("http://localhost:3000/images/1")
   .then((res) => res.json())
   .then((data) => renderContent(data));
 
 //create variables for our functions
 
-let renderTitle = document.getElementById("card-title");
+let renderTitle = document.getElementById("card__title");
 let renderImage = document.getElementById("card-image");
 let renderlikeBtn = document.getElementById("like-count");
-
 
 //create a function to render the title image and comments
 function renderContent(data) {
   renderTitle.innerText = data.title;
   renderImage.src = data.image;
-  renderlikeBtn.innerHTML = data.likes
+  renderlikeBtn.innerHTML = data.likes;
 }
 
 // fetch request fot the comments
 fetch("http://localhost:3000/comments")
-.then((res) => res.json())
-.then((data) => renderComments(data));
+  .then((res) => res.json())
+  .then((data) => renderComments(data));
 
 let renderComment = document.getElementById("comments-list");
 
@@ -56,4 +54,14 @@ let num = 0;
 likeBtn.addEventListener("click", function () {
   num = num + 1;
   renderlikeBtn.innerHTML = num + " likes";
-})
+});
+
+let heart = document.getElementById("heart");
+heart.addEventListener("click", () => {
+  if (heart.classList.contains("red")) {
+    heart.classList.add("white");
+    heart.src = "assets/whiteHeart.png";
+  } else {
+    heart.src = "assets/redHeart.png";
+  }
+});
