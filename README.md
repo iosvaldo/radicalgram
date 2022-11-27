@@ -1,4 +1,4 @@
-# Flatagram
+# Radicalgram
 
 Today you'll be building an app for viewing, liking, and commenting on a single
 picture. You will be using a local API and building out the frontend for our
@@ -43,7 +43,7 @@ As a user, I can:
    ```txt
    GET /images/1
 
-  Example Response:
+   Example Response:
    {
      "id": 1,
      "title": "Radicalx Virtual Experiences",
@@ -53,43 +53,41 @@ As a user, I can:
        {
          "id": 1,
          "imageId": 1,
-         "content": "Amazing experience"
+         "content": "Amazing experience!"
        },
        {
          "id": 2,
          "imageId": 1,
-         "content": "I look forward to collaborating."
+         "content": "I look forward to collaborating!"
        },
        {
          "id": 3,
          "imageId": 1,
-         "content": "Go! RadicalX"
+         "content": "Go RadicalX!"
        }
      ]
    }
    ```
 
 2. Click on the heart icon to increase image likes on the page. **No persistence
-   is needed**.
+is needed**.
 
 3. Add a new comment to the page when the comment form is submitted. **No
-   persistence is needed**.
+persistence is needed**.
 
 ### Bonus Deliverables
 
 As a user, I can:
 
 1. Remove a comment from the page when it is clicked. (Note: no persistence is
-   needed; it's fine if the comment shows up again when the page is refreshed)
+needed; it's fine if the comment shows up again when the page is refreshed)
 
 2. Click the title of the image to toggle whether or not the image is being
-   displayed. Clicking once on the title of the image (the `h2#card__title`
-   element) will hide the image element visually. Clicking on the title
-   again will display the image once more.
+displayed. Clicking once on the title of the image (`h2#card__title`) will hide the image element visually. Clicking on the title
+again will display the image once more.
 
 3. Click the image and see a new random image of a dog. Make a GET request to
-   this API to request a random color images:
-   [https://www.colourlovers.com/api/colors/random](https://www.colourlovers.com/api/colors/random)
-   Then replace the image of the colors with the new random image returned by the
-   API.
-
+this API to request a random color images:
+[https://www.colourlovers.com/api/colors/random](https://www.colourlovers.com/api/colors/random)
+Then replace the image of the colors with the new random image returned by the
+API.
