@@ -25,7 +25,6 @@ fetch("http://localhost:3000/comments")
 let renderComment = document.getElementById("comments-list");
 
 function renderComments(data) {
-  renderComment.innerHMTL = data.content;
   for (const item of data) {
     let newComment = document.createElement("li");
     newComment.innerText = item.content;
