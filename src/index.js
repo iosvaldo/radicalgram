@@ -1,49 +1,51 @@
 // write your code here
-
 fetch("http://localhost:3000/images/1")
-  .then((res) => res.json())
-  .then((data) => renderContent(data));
+  .then((response) => response.json())
+  .then((data) => renderConent(data))
+
 
 //create variables for our functions
-
 let renderTitle = document.getElementById("card__title");
 let renderImage = document.getElementById("card-image");
-let renderlikeBtn = document.getElementById("like-count");
+let renderLikeCount = document.getElementById("like-count");
+
 
 //create a function to render the title image and comments
-function renderContent(data) {
-  renderTitle.innerText = data.title;
+function renderConent(data) {
+  renderTitle.innerHTML = data.title;
   renderImage.src = data.image;
-  renderlikeBtn.innerHTML = data.likes;
+  renderLikeCount.innerText = data.likes;
 }
 
 // fetch request fot the comments
 fetch("http://localhost:3000/comments")
   .then((res) => res.json())
-  .then((data) => renderComments(data));
+  .then((data) => renderComments(data))
 
+//create variable for comment
 let renderComment = document.getElementById("comments-list");
 
+//crete dunction to render comments & for loop.
 function renderComments(data) {
   for (const item of data) {
-    let newComment = document.createElement("li");
-    newComment.innerText = item.content;
+    let newComment = document.createElement("li")
+    newComment.innerHTML = item.content;
     renderComment.append(newComment);
   }
 }
 
 //crete variable for the form
 
-mainForm = document.getElementById("comment-form");
+mainform = document.getElementById("comment-form")
 
 //Add and event listender for submission & render new comment
-mainForm.addEventListener("submit", function (e) {
+mainform.addEventListener("submit", function (e) {
   e.preventDefault();
   let newInput = document.createElement("li");
-  newInput.innerText = comment.value;
+  newInput.innerHTML = comment.value;
   renderComment.append(newInput);
   e.target.reset();
-});
+})
 
 let likeBtn = document.getElementById("like-button");
 //this is a variable for the like count field
@@ -52,15 +54,11 @@ let num = 0;
 // addEventListener to incremment the click counter by one.
 likeBtn.addEventListener("click", function () {
   num = num + 1;
-  renderlikeBtn.innerHTML = num + " likes";
-});
-
-let heart = document.getElementById("heart");
-heart.addEventListener("click", () => {
-  if (heart.classList.contains("red")) {
-    heart.classList.add("white");
-    heart.src = "assets/whiteHeart.png";
-  } else {
+  renderLikeCount.innerHTML = num + " likes";
+  if (heart.classList.contains("white")) {
     heart.src = "assets/redHeart.png";
+  } else {
+    heart.src = "assets/blkHeart.png";
   }
 });
+
