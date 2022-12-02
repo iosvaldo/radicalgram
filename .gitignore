@@ -1,3 +1,5 @@
+//CODE SOLUTION//
+
 // write your code here
 fetch("http://localhost:3000/images/1")
   .then((response) => response.json())
