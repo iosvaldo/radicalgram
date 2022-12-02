@@ -1,4 +1,4 @@
-//CODE SOLUTION//
+//CODE SOLUTION HERE//
 
 // write your code here
 fetch("http://localhost:3000/images/1")
