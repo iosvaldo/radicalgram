@@ -5,6 +5,12 @@
       "title": "Radicalx Virtual Experiences",
       "likes": 0,
       "image": "./assets/radicalx_post.jpeg"
+    }, 
+    {
+      "id": 2,
+      "title": "Global Experience",
+      "likes": 1,
+      "image": ""
     }
   ],
   "comments": [
