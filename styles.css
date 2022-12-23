@@ -24,9 +24,8 @@ body {
   font-weight: bold;
 }
 
-.white{
-  width:25px;
-  
+.white {
+  width: 25px;
 }
 
 .header__contain {
@@ -34,13 +33,13 @@ body {
   align-items: center;
 }
 
-.image-container {
+.image__container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.image-card {
+.image__card {
   width: 300px;
   border: 1px solid #00000020;
   border-radius: 2px;
@@ -73,19 +72,17 @@ body {
   font-weight: 600;
 }
 
-#like-button {
+#like__button {
   border: none;
   background: none;
   cursor: pointer;
 }
 
-
-#like-button:active {
-  
+#like__button:active {
   transform: scale(1.5);
 }
 
-#like-button:focus {
+#like__button:focus {
   outline: none;
 }
 
@@ -101,24 +98,24 @@ body {
   letter-spacing: 0.2px;
 }
 
-.comment-form {
+.comment__form {
   width: 100%;
   border-top: 1px solid #00000020;
   padding: 10px;
   margin-top: 10px;
 }
 
-.comment-input {
+.comment__input {
   width: 83%;
   border: none;
   font-size: 0.8rem;
 }
 
-.comment-input:focus {
+.comment__input:focus {
   outline: none;
 }
 
-.comment-button {
+.comment__button {
   border: none;
   font-size: 0.8rem;
   font-weight: 600;
@@ -127,14 +124,14 @@ body {
   transition: color 300ms;
 }
 
-.comment-button:hover {
+.comment__button:hover {
   color: rgb(37, 68, 245);
 }
 
-.comment-button:active {
+.comment__button:active {
   color: rgb(127, 146, 250);
 }
 
-.comment-button:focus {
+.comment__button:focus {
   outline: none;
 }

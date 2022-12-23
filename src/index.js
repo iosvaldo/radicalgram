@@ -8,8 +8,8 @@ fetch(radicalgramAPI)
 
 //create variables for our functions
 let renderTitle = document.getElementById("card__title");
-let renderImage = document.getElementById("card-image");
-let renderLikeCount = document.getElementById("like-count");
+let renderImage = document.getElementById("card__image");
+let renderLikeCount = document.getElementById("like__count");
 
 //create a function to render the title image and comments
 function renderConent(data) {
@@ -24,7 +24,7 @@ fetch(commentsAPI)
   .then(renderComments);
 
 //create variable for comment
-let renderComment = document.getElementById("comments-list");
+let renderComment = document.getElementById("comments__list");
 
 //create function to render comments & for loop.
 function renderComments(data) {
@@ -36,7 +36,7 @@ function renderComments(data) {
 }
 
 //create variable for the form
-mainform = document.getElementById("comment-form");
+mainform = document.getElementById("comment__form");
 
 //Add Event Listener to the form submission button
 mainform.addEventListener("submit", function (e) {
@@ -51,9 +51,9 @@ mainform.addEventListener("submit", function (e) {
 
 // localStorage in use but need to be clean it up.
 const input = document.querySelector("input"),
-li = document.querySelector(".h_3");
+  li = document.querySelector(".h_3");
 li.innerHTML = localStorage.getItem("value");
-input.addEventListener("keyup",logKey);
+input.addEventListener("keyup", logKey);
 
 function logKey() {
   localStorage.setItem("value", input.value);
@@ -61,7 +61,7 @@ function logKey() {
 }
 
 // second attempt at local storage
-// const commentForm = document.getElementById("comment-form");
+// const commentForm = document.getElementById("comment__form");
 // const commentUl = document.getElementById("comment");
 // const commentInput = commentForm["comment"];
 
